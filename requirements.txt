@@ -1,6 +1,6 @@
-openai
-deepl
-tiktoken
-yt_dlp
-youtube_transcript_api
-PyPDF2
+streamlit~=1.33.0
+pypdf2~=3.0.1
+requests~=2.31.0
+tiktoken~=0.6.0
+openai~=1.17.0
+deepl~=1.17.0
