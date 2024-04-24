@@ -6,7 +6,7 @@ import tiktoken
 
 def summarize_text(user_text, lang='en'):
     client = OpenAI(
-        api_key=st.secrets["OPENAI_KEY"]
+        api_key=st.secrets["openai_key"]
     )
 
     if lang == "en":
@@ -46,7 +46,7 @@ def summarize_text_final(text_list, lang="en"):
 
 def translate_english_to_korean_by_openAI(text):
     client = OpenAI(
-        api_key=st.secrets["OPENAI_KEY"]
+        api_key=st.secrets["openai_key"]
     )
     user_content = f"Translate the following English sentences tnto Korean.\n {text}"
     messages = [{"role":"user", "content":user_content}]
@@ -64,7 +64,7 @@ def translate_english_to_korean_by_openAI(text):
 
 
 def translate_english_to_korean_by_deepL(text):
-    auth_key = st.secrets["DEEPL_KEY"]
+    auth_key = st.secrets["deepl_key"]
     translator = deepl.Translator(auth_key)
 
     result = translator.translate_text(text, target_lang="KO")

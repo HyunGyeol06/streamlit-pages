@@ -6,7 +6,7 @@ import textwrap
 
 def translate_text_for_image(text):
     client = OpenAI(
-        api_key=st.secrets["OPENAI_KEY"]
+        api_key=st.secrets["openai_key"]
     )
 
     user_content = f"Translate the following Korean sentences into English\n {text}"
@@ -27,7 +27,7 @@ def translate_text_for_image(text):
 
 def generate_text_for_img(text):
     client = OpenAI(
-        api_key=st.secrets["OPENAI_KEY"]
+        api_key=st.secrets["openai_key"]
     )
 
     user_content = f"Describe the following in 1000 characters to create an image.\n {text}"
@@ -48,7 +48,7 @@ def generate_text_for_img(text):
 
 def generate_image_from_text(text_for_img, img_num=1, img_size="512x512"):
     client = OpenAI(
-        api_key=st.secrets["OPENAI_KEY"]
+        api_key=st.secrets["openai_key"]
     )
     storten_text_for_img = textwrap.shorten(text_for_img, 99)
 

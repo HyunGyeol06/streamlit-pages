@@ -5,6 +5,6 @@ st.set_page_config(
     page_icon="👋",
 )
 
-st.write("main")
+st.write(st.secrets["wtf"])
 
 st.sidebar.success("Select a page above.")
