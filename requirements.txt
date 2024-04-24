@@ -4,3 +4,5 @@ requests~=2.31.0
 tiktoken~=0.6.0
 openai~=1.17.0
 deepl~=1.17.0
+yt-dlp
+youtube-transcript-api
